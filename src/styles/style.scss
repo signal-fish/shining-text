@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #000;
+}
+
+@font-face {
+  font-family: 'Noto Sans SC';
+  src: url(../assets/fonts/Noto_Sans_SC/NotoSansSC-Bold.otf);
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url(../assets/fonts/Poppins/Poppins-Bold.ttf);
+}
+
+p {
+  margin: 10px;
+  position: relative;
+  font-family: sans-serif;
+  color: white;
+  text-transform: uppercase;
+  font-size: 3.5em;
+  letter-spacing: 2px;
+  overflow: hidden;
+  background: linear-gradient(90deg, #000, #fff, #000);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animate 3s linear infinite;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.01);
+}
+
+p.en {
+  font-family: 'Poppins', sans-serif;
+}
+
+p.ch {
+  font-family: 'Noto Sans SC', sans-serif;
+}
+
+@keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
+}
